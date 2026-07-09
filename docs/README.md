@@ -12,3 +12,4 @@ Read them in order, each one assumes the previous ones already happened.
 2. [Tooling](02-tooling.md) — `chore/tooling`
 3. [Application ports](03-application-ports.md) — `feature/application-ports`
 4. [ValidateAndIngestDataset use case](04-validate-and-ingest-use-case.md) — `feature/validate-and-ingest-use-case`
+5. [LocalFileStorage adapter](05-local-filesystem-adapter.md) — `feature/local-filesystem-adapter`
