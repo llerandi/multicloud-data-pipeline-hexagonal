@@ -39,7 +39,12 @@ src/
 
 - [x] Domain layer: `DataQualityReport`, `QualityThresholds`, `DatasetRejectedError`, and the null-ratio rule, with unit tests.
 - [x] Application layer: ports and the `ValidateAndIngestDataset` use case.
-- [ ] Infrastructure adapters: storage, repository, metrics, notifications.
+- Infrastructure adapters:
+  - [x] `FileStorage`: local filesystem (`LocalFileStorage`), for tests and local development.
+  - [ ] `FileStorage`: GCS, S3.
+  - [ ] `DatasetRepository`: BigQuery, Postgres.
+  - [ ] `MetricsPublisher`: Cloud Monitoring, console.
+  - [ ] `NotificationPort`: Slack/email, log stub.
 - [ ] `ModelInferencePort` with a scikit-learn adapter and a Vertex AI adapter.
 - [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
 
