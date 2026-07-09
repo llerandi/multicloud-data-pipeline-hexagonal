@@ -43,7 +43,8 @@ src/
   - [x] `FileStorage`: local filesystem (`LocalFileStorage`), for tests and local development.
   - [ ] `FileStorage`: GCS, S3.
   - [ ] `DatasetRepository`: BigQuery, Postgres.
-  - [ ] `MetricsPublisher`: Cloud Monitoring, console.
+  - [x] `MetricsPublisher`: console (`ConsoleMetricsPublisher`), for local development.
+  - [ ] `MetricsPublisher`: Cloud Monitoring.
   - [ ] `NotificationPort`: Slack/email, log stub.
 - [ ] `ModelInferencePort` with a scikit-learn adapter and a Vertex AI adapter.
 - [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
