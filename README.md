@@ -38,10 +38,79 @@ src/
 ## Current status
 
 - [x] Domain layer: `DataQualityReport`, `QualityThresholds`, `DatasetRejectedError`, and the null-ratio rule, with unit tests.
-- [ ] Application layer: ports and the `ValidateAndIngestDataset` use case.
+- [x] Application layer: ports and the `ValidateAndIngestDataset` use case.
 - [ ] Infrastructure adapters: storage, repository, metrics, notifications.
 - [ ] `ModelInferencePort` with a scikit-learn adapter and a Vertex AI adapter.
-- [ ] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
+- [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
+
+## Commands
+
+All commands below assume a Python virtual environment is active. Without
+one, `pytest` and `ruff` are installed into some Python installation on the
+machine, not necessarily the one PowerShell resolves when you type their
+name, which is why the terminal says it does not recognize them.
+
+Create and activate a virtual environment, once, from the repository root
+in PowerShell:
+
+```
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+If PowerShell refuses to run that script (an execution policy error), allow
+it for the current window only, then activate again:
+
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.venv\Scripts\Activate.ps1
+```
+
+Once active, the prompt shows `(.venv)` at the start of the line. That is
+the sign `pytest`, `ruff` and anything else installed below will be found.
+Every new PowerShell window needs `.venv\Scripts\Activate.ps1` run again,
+activation does not persist between terminal sessions. To leave the
+environment: `deactivate`. `.venv` is already listed in `.gitignore`, it
+never gets committed.
+
+Setup, once after creating the environment, and again after pulling changes
+to `pyproject.toml`:
+
+```
+pip install -e ".[dev]"
+```
+
+Run the tests:
+
+```
+pytest
+```
+
+Run only one layer's tests, for example the domain layer:
+
+```
+pytest tests/domain
+```
+
+Lint:
+
+```
+ruff check .
+```
+
+Format:
+
+```
+ruff format .
+```
+
+Running the pipeline itself has no command yet. Only the domain and
+application layers exist so far, with no real adapter wired in, so there
+is nothing runnable end to end until the first infrastructure PR lands.
+
+## Documentation
+
+Each pull request has a companion write-up in [docs/](docs/README.md) explaining not just what changed, but why, at a level of detail this README does not go into.
 
 ## Development workflow
 
