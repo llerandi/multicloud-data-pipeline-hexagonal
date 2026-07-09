@@ -45,7 +45,8 @@ src/
   - [ ] `DatasetRepository`: BigQuery, Postgres.
   - [x] `MetricsPublisher`: console (`ConsoleMetricsPublisher`), for local development.
   - [ ] `MetricsPublisher`: Cloud Monitoring.
-  - [ ] `NotificationPort`: Slack/email, log stub.
+  - [x] `NotificationPort`: log stub (`LogStubNotificationPort`), for tests and local development.
+  - [ ] `NotificationPort`: Slack/email.
 - [ ] `ModelInferencePort` with a scikit-learn adapter and a Vertex AI adapter.
 - [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
 
