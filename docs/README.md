@@ -15,3 +15,4 @@ Read them in order, each one assumes the previous ones already happened.
 5. [LocalFileStorage adapter](05-local-filesystem-adapter.md) — `feature/local-filesystem-adapter`
 6. [ConsoleMetricsPublisher adapter](06-console-metrics-publisher.md) — `feature/console-metrics-publisher`
 7. [LogStubNotificationPort adapter](07-log-stub-notification-port.md) — `feature/log-stub-notification-port`
+8. [ModelInferencePort](08-model-inference-port.md) — `feature/model-inference-port`
