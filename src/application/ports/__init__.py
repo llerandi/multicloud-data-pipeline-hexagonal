@@ -9,11 +9,13 @@ specifying how that capability is provided.
 from src.application.ports.dataset_repository import DatasetRepository
 from src.application.ports.file_storage import FileStorage
 from src.application.ports.metrics_publisher import MetricsPublisher
+from src.application.ports.model_inference_port import ModelInferencePort
 from src.application.ports.notification_port import NotificationPort
 
 __all__ = [
     "DatasetRepository",
     "FileStorage",
     "MetricsPublisher",
+    "ModelInferencePort",
     "NotificationPort",
 ]

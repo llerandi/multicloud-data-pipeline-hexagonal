@@ -13,6 +13,7 @@ from src.application.ports import (
     DatasetRepository,
     FileStorage,
     MetricsPublisher,
+    ModelInferencePort,
     NotificationPort,
 )
 from src.domain.models import DataQualityReport
@@ -72,6 +73,21 @@ def test_metrics_publisher_concrete_subclass_works():
     )
     publisher.publish("customers", report)
     assert publisher.published == [("customers", report)]
+
+
+def test_model_inference_port_cannot_be_instantiated_directly():
+    with pytest.raises(TypeError):
+        ModelInferencePort()
+
+
+def test_model_inference_port_concrete_subclass_works():
+    class ConstantModelInferencePort(ModelInferencePort):
+        def predict(self, dataset_name, rows):
+            return ["ok" for _ in rows]
+
+    predictor = ConstantModelInferencePort()
+    predictions = predictor.predict("customers", [{"id": "1"}, {"id": "2"}])
+    assert predictions == ["ok", "ok"]
 
 
 def test_notification_port_cannot_be_instantiated_directly():
