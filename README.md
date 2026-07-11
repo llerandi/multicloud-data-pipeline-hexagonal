@@ -1,5 +1,9 @@
 # Multicloud Data Pipeline Hexagonal
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
+[![Stage](https://img.shields.io/badge/Stage-WIP-orange)](#)
+
 This is a learning project. It exists to practice hexagonal architecture (also called ports and adapters) applied to a data engineering problem, so the code favors clarity over brevity. Comments and docstrings are more detailed than you would normally write in a production codebase, on purpose, because the goal here is to explain the reasoning, not just the result. If you land on this repository from GitHub, that is why.
 
 ## Scope
