@@ -16,3 +16,4 @@ Read them in order, each one assumes the previous ones already happened.
 6. [ConsoleMetricsPublisher adapter](06-console-metrics-publisher.md) — `feature/console-metrics-publisher`
 7. [LogStubNotificationPort adapter](07-log-stub-notification-port.md) — `feature/log-stub-notification-port`
 8. [ModelInferencePort](08-model-inference-port.md) — `feature/model-inference-port`
+9. [SklearnModelInference adapter](09-sklearn-inference-adapter.md) — `feature/sklearn-inference-adapter`
