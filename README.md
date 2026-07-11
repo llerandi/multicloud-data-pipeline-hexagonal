@@ -21,17 +21,17 @@ The code is split into three layers, each with a single direction of dependency:
 
 ```
 src/
-├── domain/            business entities, value objects and rules
+├── domain/             business entities, value objects and rules
 ├── application/        use cases and the ports they rely on
-│   ├── ports/           interfaces the application needs from the outside world
-│   ├── use_cases/       one module per use case
-│   └── services/        orchestration across multiple use cases or steps
-└── infrastructure/      concrete adapters implementing the ports
-    ├── storage/          FileStorage: GCS, S3, local filesystem
-    ├── repository/        DatasetRepository: BigQuery, Postgres
-    ├── metrics/           MetricsPublisher: Cloud Monitoring, console
-    ├── notifications/     NotificationPort: Slack/email, log stub
-    └── inference/         ModelInferencePort: local scikit-learn, Vertex AI
+│   ├── ports/          interfaces the application needs from the outside world
+│   ├── use_cases/      one module per use case
+│   └── services/       orchestration across multiple use cases or steps
+└── infrastructure/     concrete adapters implementing the ports
+    ├── storage/        FileStorage: GCS, S3, local filesystem
+    ├── repository/     DatasetRepository: BigQuery, Postgres
+    ├── metrics/        MetricsPublisher: Cloud Monitoring, console
+    ├── notifications/  NotificationPort: Slack/email, log stub
+    └── inference/      ModelInferencePort: local scikit-learn, Vertex AI
 ```
 
 **domain** holds `DataQualityReport` and the business rule that decides if a dataset is acceptable. It does not import anything from `application` or `infrastructure`, and it does not know that GCS or BigQuery exist. This is what makes the rule testable with plain unit tests and no mocks.
