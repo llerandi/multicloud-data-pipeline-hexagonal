@@ -4,6 +4,8 @@ This is a learning project: it exists to practice **hexagonal architecture**
 (ports and adapters) applied to a real-ish data engineering problem. The code
 favors clarity over brevity on purpose.
 
+![Hexagonal Architecture](./images/hexagonal_architecture.png)
+
 This Wiki is the conceptual thread that ties the project together. For each
 pull request, [`docs/`](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/tree/main/docs)
 in the repo explains **what changed and why, at code level**. This Wiki
