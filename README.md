@@ -54,7 +54,7 @@ src/
   - [ ] `NotificationPort`: Slack/email.
 - `ModelInferencePort`:
   - [x] Port definition.
-  - [ ] Local scikit-learn adapter.
+  - [x] Local scikit-learn adapter (`SklearnModelInference`).
   - [ ] Vertex AI adapter.
 - [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
 
@@ -93,6 +93,15 @@ to `pyproject.toml`:
 
 ```
 pip install -e ".[dev]"
+```
+
+Each infrastructure adapter that needs a real dependency (scikit-learn,
+later a cloud SDK) gets its own optional extra instead of bundling
+everything into `dev`, so installing for domain or application work stays
+light. To also run the scikit-learn adapter and its tests:
+
+```
+pip install -e ".[dev,sklearn]"
 ```
 
 Run the tests:
