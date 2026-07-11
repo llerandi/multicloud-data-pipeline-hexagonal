@@ -182,6 +182,7 @@ cython_debug/
 
 # IDE
 .vscode
+.idea
 
 # Garbage
 .DS_Store
