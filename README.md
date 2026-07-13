@@ -47,7 +47,8 @@ src/
 - Infrastructure adapters:
   - [x] `FileStorage`: local filesystem (`LocalFileStorage`), for tests and local development.
   - [ ] `FileStorage`: GCS, S3.
-  - [ ] `DatasetRepository`: BigQuery, Postgres.
+  - [x] `DatasetRepository`: Postgres (`PostgresDatasetRepository`), unit tested with a fake connection, real database integration test still pending.
+  - [ ] `DatasetRepository`: BigQuery.
   - [x] `MetricsPublisher`: console (`ConsoleMetricsPublisher`), for local development.
   - [ ] `MetricsPublisher`: Cloud Monitoring.
   - [x] `NotificationPort`: log stub (`LogStubNotificationPort`), for tests and local development.
