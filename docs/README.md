@@ -17,3 +17,4 @@ Read them in order, each one assumes the previous ones already happened.
 7. [LogStubNotificationPort adapter](07-log-stub-notification-port.md) — `feature/log-stub-notification-port`
 8. [ModelInferencePort](08-model-inference-port.md) — `feature/model-inference-port`
 9. [SklearnModelInference adapter](09-sklearn-inference-adapter.md) — `feature/sklearn-inference-adapter`
+10. [PostgresDatasetRepository adapter](10-postgres-repository-adapter.md) — `feature/postgres-repository-adapter`
