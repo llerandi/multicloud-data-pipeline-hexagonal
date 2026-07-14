@@ -46,7 +46,8 @@ src/
 - [x] Application layer: ports and the `ValidateAndIngestDataset` use case.
 - Infrastructure adapters:
   - [x] `FileStorage`: local filesystem (`LocalFileStorage`), for tests and local development.
-  - [ ] `FileStorage`: GCS, S3.
+  - [x] `FileStorage`: GCS (`GcsFileStorage`).
+  - [ ] `FileStorage`: S3.
   - [x] `DatasetRepository`: Postgres (`PostgresDatasetRepository`), unit tested with a fake connection, real database integration test still pending.
   - [ ] `DatasetRepository`: BigQuery.
   - [x] `MetricsPublisher`: console (`ConsoleMetricsPublisher`), for local development.
