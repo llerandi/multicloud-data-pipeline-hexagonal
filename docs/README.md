@@ -19,3 +19,4 @@ Read them in order, each one assumes the previous ones already happened.
 9. [SklearnModelInference adapter](09-sklearn-inference-adapter.md) — `feature/sklearn-inference-adapter`
 10. [PostgresDatasetRepository adapter](10-postgres-repository-adapter.md) — `feature/postgres-repository-adapter`
 11. [GcsFileStorage adapter](11-gcs-file-storage-adapter.md) — `feature/gcs-file-storage-adapter`
+12. [S3FileStorage adapter](12-s3-file-storage-adapter.md) — `feature/s3-file-storage-adapter`
