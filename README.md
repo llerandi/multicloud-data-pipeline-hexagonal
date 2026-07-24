@@ -49,7 +49,7 @@ src/
   - [x] `FileStorage`: GCS (`GcsFileStorage`).
   - [x] `FileStorage`: S3 (`S3FileStorage`).
   - [x] `DatasetRepository`: Postgres (`PostgresDatasetRepository`), unit tested with a fake connection, real database integration test still pending.
-  - [ ] `DatasetRepository`: BigQuery.
+  - [x] `DatasetRepository`: BigQuery (`BigqueryDatasetRepository`).
   - [x] `MetricsPublisher`: console (`ConsoleMetricsPublisher`), for local development.
   - [ ] `MetricsPublisher`: Cloud Monitoring.
   - [x] `NotificationPort`: log stub (`LogStubNotificationPort`), for tests and local development.
