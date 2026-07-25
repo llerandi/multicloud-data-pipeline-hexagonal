@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
-[![Stage](https://img.shields.io/badge/Stage-WIP-orange)](#)
+[![Stage](https://img.shields.io/badge/Stage-v1.0-orange)](#)
 [![Wiki](https://img.shields.io/badge/Wiki-Documentation-blue?logo=github&logoColor=white)](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/wiki)
 
 This is a learning project. It exists to practice hexagonal architecture (also called ports and adapters) applied to a data engineering problem, so the code favors clarity over brevity. Comments and docstrings are more detailed than you would normally write in a production codebase, on purpose, because the goal here is to explain the reasoning, not just the result. If you land on this repository from GitHub, that is why.
@@ -57,7 +57,7 @@ src/
 - `ModelInferencePort`:
   - [x] Port definition.
   - [x] Local scikit-learn adapter (`SklearnModelInference`).
-  - [ ] Vertex AI adapter.
+  - [x] Vertex AI adapter (`VertexAiModelInference`).
 - [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
 
 ## Commands
