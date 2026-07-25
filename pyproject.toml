@@ -31,6 +31,9 @@ monitoring = [
 slack = [
     "slack_sdk>=3.27",
 ]
+vertexai = [
+    "google-cloud-aiplatform>=1.44",
+]
 
 [build-system]
 requires = ["setuptools>=68"]
