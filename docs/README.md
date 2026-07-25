@@ -21,3 +21,4 @@ Read them in order, each one assumes the previous ones already happened.
 11. [GcsFileStorage adapter](11-gcs-file-storage-adapter.md) — `feature/gcs-file-storage-adapter`
 12. [S3FileStorage adapter](12-s3-file-storage-adapter.md) — `feature/s3-file-storage-adapter`
 13. [BigqueryDatasetRepository adapter](13-bigquery-repository-adapter.md) — `feature/bigquery-repository-adapter`
+14. [CloudMonitoringMetricsPublisher adapter](14-cloud-monitoring-metrics-publisher.md) — `feature/cloud-monitoring-metrics-publisher`

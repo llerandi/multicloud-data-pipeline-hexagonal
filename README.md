@@ -51,7 +51,7 @@ src/
   - [x] `DatasetRepository`: Postgres (`PostgresDatasetRepository`), unit tested with a fake connection, real database integration test still pending.
   - [x] `DatasetRepository`: BigQuery (`BigqueryDatasetRepository`).
   - [x] `MetricsPublisher`: console (`ConsoleMetricsPublisher`), for local development.
-  - [ ] `MetricsPublisher`: Cloud Monitoring.
+  - [x] `MetricsPublisher`: Cloud Monitoring (`CloudMonitoringMetricsPublisher`), publishes a plain-dict "point" shape, real TimeSeries translation left to the injected client.
   - [x] `NotificationPort`: log stub (`LogStubNotificationPort`), for tests and local development.
   - [ ] `NotificationPort`: Slack/email.
 - `ModelInferencePort`:
