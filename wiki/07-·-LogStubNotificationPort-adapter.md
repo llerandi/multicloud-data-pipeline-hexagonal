@@ -33,9 +33,10 @@ filter by severity or route somewhere, unlike a metrics readout.
 
 ## Why it matters for the rest of the project
 
-This page pairs with [06 · ConsoleMetricsPublisher](06-Console-Metrics-Publisher):
+This page pairs with [06 · ConsoleMetricsPublisher](06-·-ConsoleMetricsPublisher-adapter):
 same "temporary dev adapter" role, deliberately different tool choice.
 Worth revisiting once a real Cloud Monitoring adapter exists - see
-[Roadmap](Roadmap) for that open question.
+[14](14-·-CloudMonitoringMetricsPublisher-adapter) and
+[Roadmap](Roadmap-and-status) for that open question.
 
-Back to [Home](Home) · Previous: [06 · ConsoleMetricsPublisher adapter](06-Console-Metrics-Publisher) · Next: [08 · ModelInferencePort](08-Model-Inference-Port)
+Back to [Home](Home) · Previous: [06 · ConsoleMetricsPublisher adapter](06-·-ConsoleMetricsPublisher-adapter) · Next: [08 · ModelInferencePort](08-·-ModelInferencePort)

@@ -37,4 +37,4 @@ implement the port's contract, and prove it with the same two kinds of
 test - isolated unit tests, plus at least one integration test wiring it
 into the actual use case.
 
-Back to [Home](Home) · Previous: [04 · Use case](04-Validate-And-Ingest-Use-Case) · Next: [06 · ConsoleMetricsPublisher adapter](06-Console-Metrics-Publisher)
+Back to [Home](Home) · Previous: [04 · Use case](04-·-ValidateAndIngestDataset-use-case) · Next: [06 · ConsoleMetricsPublisher adapter](06-·-ConsoleMetricsPublisher-adapter)

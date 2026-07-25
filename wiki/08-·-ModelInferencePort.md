@@ -29,13 +29,13 @@ implementing or calling it will actually read it.
   every case this project needs.
 - Wiring `predict` into the actual use case is deliberately deferred to a
   later PR, once a real adapter exists to call it with - see
-  [Roadmap](Roadmap).
+  [Roadmap](Roadmap-and-status).
 
 ## Why it matters for the rest of the project
 
-This is the last port defined so far. Everything from here is
-implementation: real cloud adapters for the four ports from stage 03, plus
-the first real adapter for this one. See [Roadmap](Roadmap) for what's
-next.
+This port sat with a definition and no adapter for a while - see
+[09 · SklearnModelInference adapter](09-·-SklearnModelInference-adapter)
+for the first real implementation, and the start of the run of real cloud
+adapters that follows through stage 14.
 
-Back to [Home](Home) · Previous: [07 · LogStubNotificationPort adapter](07-Log-Stub-Notification-Port)
+Back to [Home](Home) · Previous: [07 · LogStubNotificationPort adapter](07-·-LogStubNotificationPort-adapter) · Next: [09 · SklearnModelInference adapter](09-·-SklearnModelInference-adapter)

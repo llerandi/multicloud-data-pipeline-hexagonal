@@ -35,8 +35,8 @@ changing this file at all.
 ## Why it matters for the rest of the project
 
 This use case is the thing every future adapter eventually plugs into. The
-whole point of stages 05–08 (and everything pending in the
-[Roadmap](Roadmap)) is proving that this class never needs to change as
-the concrete infrastructure around it does.
+whole point of stages 05–14 (and everything pending in the
+[Roadmap](Roadmap-and-status)) is proving that this class never needs to
+change as the concrete infrastructure around it does.
 
-Back to [Home](Home) · Previous: [03 · Application ports](03-Application-Ports) · Next: [05 · LocalFileStorage adapter](05-Local-Filesystem-Adapter)
+Back to [Home](Home) · Previous: [03 · Application ports](03-·-Application-ports) · Next: [05 · LocalFileStorage adapter](05-·-LocalFileStorage-adapter)
