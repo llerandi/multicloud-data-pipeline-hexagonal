@@ -34,4 +34,4 @@ cloud adapters start landing (GCS, S3, BigQuery...), CI is what catches an
 adapter accidentally importing something it shouldn't, or breaking an
 existing test for a layer it wasn't supposed to touch.
 
-Back to [Home](Home) · Previous: [01 · Domain model](01-Domain-Model) · Next: [03 · Application ports](03-Application-Ports)
+Back to [Home](Home) · Previous: [01 · Domain model](01-·-Domain-model) · Next: [03 · Application ports](03-·-Application-ports)

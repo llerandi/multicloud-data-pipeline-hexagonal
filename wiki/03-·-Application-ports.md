@@ -37,4 +37,4 @@ S3, BigQuery, Slack, Vertex AI) is judged against these four contracts.
 The use case in the next stage is only possible because these ports exist
 first - it can be written and tested before a single real adapter does.
 
-Back to [Home](Home) · Previous: [02 · Tooling](02-Tooling) · Next: [04 · Use case](04-Validate-And-Ingest-Use-Case)
+Back to [Home](Home) · Previous: [02 · Tooling](02-·-Tooling) · Next: [04 · Use case](04-·-ValidateAndIngestDataset-use-case)

@@ -28,11 +28,11 @@ same pattern, same guarantee.
 
 ## Why it matters for the rest of the project
 
-Compare this page with [07](07-Log-Stub-Notification-Port): both are
-dev-only stand-ins for a port, and both were deliberately built
+Compare this page with [07](07-·-LogStubNotificationPort-adapter): both
+are dev-only stand-ins for a port, and both were deliberately built
 *differently* (`print` here, `logging` there) because the events they
 represent are different in kind. That contrast is worth sitting with - it
 shows hexagonal architecture doesn't force every adapter for every port to
 look the same, only that each one honestly fulfills its contract.
 
-Back to [Home](Home) · Previous: [05 · LocalFileStorage adapter](05-Local-Filesystem-Adapter) · Next: [07 · LogStubNotificationPort adapter](07-Log-Stub-Notification-Port)
+Back to [Home](Home) · Previous: [05 · LocalFileStorage adapter](05-·-LocalFileStorage-adapter) · Next: [07 · LogStubNotificationPort adapter](07-·-LogStubNotificationPort-adapter)

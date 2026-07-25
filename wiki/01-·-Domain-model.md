@@ -23,10 +23,10 @@ infrastructure being up and running.
   just four numbers that make two instances equal if the numbers match.
   See [Glossary](Glossary#value-object).
 - `is_acceptable` takes `thresholds` as a parameter instead of reading a
-  global — that's what makes the boundary case (`null_ratio` exactly at
+  global - that's what makes the boundary case (`null_ratio` exactly at
   the threshold) trivial to test without mocking anything.
 - `DatasetRejectedError` carries the full `report`, not just a message
-  string — a business failure that the application layer can inspect, not
+  string - a business failure that the application layer can inspect, not
   just a string to print.
 
 ## Why it matters for the rest of the project
@@ -36,4 +36,4 @@ import sneaks into `src/domain/`, the "swap providers without touching
 business logic" premise of the whole project breaks. This is the layer to
 protect most carefully as new adapters get added.
 
-Back to [Home](Home) · Next: [02 · Tooling](02-Tooling)
+Back to [Home](Home) · Next: [02 · Tooling](02-·-Tooling)
