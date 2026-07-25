@@ -32,6 +32,8 @@ write-up, the Wiki page is the "why this matters for the architecture" framing.
 | 12 | The "swap providers" claim made concrete: two SDKs, one contract | [12 · S3FileStorage adapter](12-·-S3FileStorage-adapter) | [docs/12-s3-file-storage-adapter.md](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/blob/main/docs/12-s3-file-storage-adapter.md) |
 | 13 | Normalizing a return-errors-as-data API into raise-on-failure | [13 · BigqueryDatasetRepository adapter](13-·-BigqueryDatasetRepository-adapter) | [docs/13-bigquery-repository-adapter.md](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/blob/main/docs/13-bigquery-repository-adapter.md) |
 | 14 | When duck-typing one method isn't enough: inventing your own shape | [14 · CloudMonitoringMetricsPublisher adapter](14-·-CloudMonitoringMetricsPublisher-adapter) | [docs/14-cloud-monitoring-metrics-publisher.md](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/blob/main/docs/14-cloud-monitoring-metrics-publisher.md) |
+| 15 | Confirming stage 14 was the exception, not the new rule | [15 · SlackNotificationPort adapter](15-·-SlackNotificationPort-adapter) | [docs/15-slack-notification-adapter.md](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/blob/main/docs/15-slack-notification-adapter.md) |
+| 16 | The second "two adapters, one port" comparison: position vs. naming | [16 · VertexAiModelInference adapter](16-·-VertexAiModelInference-adapter) | [docs/16-vertex-ai-inference-adapter.md](https://github.com/llerandi/multicloud-data-pipeline-hexagonal/blob/main/docs/16-vertex-ai-inference-adapter.md) |
 
 Also in this Wiki:
 
@@ -44,12 +46,23 @@ Also in this Wiki:
 2. Go stage by stage through the table above, in order - each one assumes the previous ones already happened.
 3. For each stage, read the Wiki page first (the concept), then the `docs/` write-up (the implementation), then the actual PR diff on GitHub if you want to see the real code changes.
 
-## Two arcs so far
+## Where the project stands
 
-Stages 1–8 build the domain, the ports, and the use case, then prove one
-port (`FileStorage`) can be implemented at all with `LocalFileStorage`.
-Stages 9–14 are all real adapters against real cloud SDKs - and they trace
-their own arc: 9 through 13 all work by duck-typing one plain method on an
-injected client, never importing the SDK itself; 14 is where that pattern
-runs out and the adapter has to invent its own translation shape instead.
-Worth reading 9–14 back to back for that contrast.
+As of stage 16, every port defined in [03 · Application ports](03-·-Application-ports)
+has every adapter its original scope called for: `FileStorage` (local,
+GCS, S3), `DatasetRepository` (Postgres, BigQuery), `MetricsPublisher`
+(console, Cloud Monitoring), `NotificationPort` (log stub, Slack), and
+`ModelInferencePort` (scikit-learn, Vertex AI). See
+[Roadmap and status](Roadmap-and-status) for what's still genuinely open
+(a composition root, a couple of documented gaps) versus what's done.
+
+Three arcs worth reading back to back for the contrast they set up:
+
+- Stages 9-13: five adapters, all built by duck-typing one plain method
+  on an injected client, no SDK import required.
+- Stage 14: the pattern runs out - Cloud Monitoring has no single plain
+  call to duck-type, so the adapter invents its own shape instead.
+- Stage 15: back to duck-typing, confirming 14 was the exception.
+- Stages 11-12 and 8-9-16: two pairs of "same port, two adapters, put
+  side by side on purpose" - one comparing client shapes (`FileStorage`),
+  one comparing data shapes (`ModelInferencePort`).

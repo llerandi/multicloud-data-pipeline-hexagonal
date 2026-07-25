@@ -43,4 +43,4 @@ same; it promises the *use case* never has to care which shape of
 trade-off a given adapter made. The real `TimeSeries` translation is
 still open work - see [Roadmap](Roadmap-and-status).
 
-Back to [Home](Home) · Previous: [13 · BigqueryDatasetRepository adapter](13-·-BigqueryDatasetRepository-adapter)
+Back to [Home](Home) · Previous: [13 · BigqueryDatasetRepository adapter](13-·-BigqueryDatasetRepository-adapter) · Next: [15 · SlackNotificationPort adapter](15-·-SlackNotificationPort-adapter)
