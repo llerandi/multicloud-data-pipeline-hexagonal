@@ -23,3 +23,4 @@ Read them in order, each one assumes the previous ones already happened.
 13. [BigqueryDatasetRepository adapter](13-bigquery-repository-adapter.md) — `feature/bigquery-repository-adapter`
 14. [CloudMonitoringMetricsPublisher adapter](14-cloud-monitoring-metrics-publisher.md) — `feature/cloud-monitoring-metrics-publisher`
 15. [SlackNotificationPort adapter](15-slack-notification-adapter.md) — `feature/slack-notification-adapter`
+16. [VertexAiModelInference adapter](16-vertex-ai-inference-adapter.md) — `feature/vertex-ai-inference-adapter`
