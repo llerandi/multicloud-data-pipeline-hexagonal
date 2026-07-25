@@ -60,6 +60,27 @@ src/
   - [x] Vertex AI adapter (`VertexAiModelInference`).
 - [x] Tooling: `pyproject.toml` and GitHub Actions CI (lint and tests on every pull request).
 
+The above is v1.0: every port has every adapter the original scope asked for, each tested with a fake, no cloud credentials needed to run the test suite. What follows is not committed work, just what is worth doing next whenever there is appetite for more.
+
+## Roadmap
+
+**v1.1 — Wire the pipeline together for real**
+- [ ] A real entry point (for example `src/main.py`) that builds real adapters from config or environment variables and runs `ValidateAndIngestDataset` end to end at least once (local filesystem + console + log stub is enough to start). Right now the full pipeline only exists assembled inside tests.
+- [ ] Call `ModelInferencePort.predict` from the use case. The port and both its adapters exist, nothing in `ValidateAndIngestDataset` calls `predict` yet.
+
+**v1.2 — Close the gaps already written down in `docs/`**
+- [ ] One shared exception for "the file does not exist" across all three `FileStorage` adapters (today: `FileNotFoundError`, GCS's `NotFound`, boto3's `ClientError`, three different answers to the same question).
+- [ ] A schema of expected ranges per column, so `out_of_range_count` stops being hardcoded to `0`.
+- [ ] A real integration test against a running Postgres instance (needs a service container in `ci.yaml`).
+
+**v1.3 — The one adapter the original scope asked for and this project skipped**
+- [ ] `NotificationPort` over email. The scope said "Slack/email", only Slack got built.
+
+**v2.0 — Bigger, optional polish**
+- [ ] Configuration management (environment variables or a settings object) to choose which adapters run in which environment.
+- [ ] Consistent structured logging across every adapter, not just the log stub.
+- [ ] A minimal CLI (something like `python -m pipeline validate-and-ingest --source ... --dataset ...`).
+
 ## Commands
 
 All commands below assume a Python virtual environment is active. Without
@@ -130,9 +151,10 @@ Format:
 ruff format .
 ```
 
-Running the pipeline itself has no command yet. Only the domain and
-application layers exist so far, with no real adapter wired in, so there
-is nothing runnable end to end until the first infrastructure PR lands.
+Running the pipeline itself still has no command. Every adapter now
+exists and is unit tested on its own, but nothing yet wires real ones
+together into one runnable pipeline, that is the first item on the
+roadmap above (v1.1).
 
 ## Documentation
 
