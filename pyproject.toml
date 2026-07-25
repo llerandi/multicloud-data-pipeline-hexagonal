@@ -28,6 +28,9 @@ bigquery = [
 monitoring = [
     "google-cloud-monitoring>=2.16",
 ]
+slack = [
+    "slack_sdk>=3.27",
+]
 
 [build-system]
 requires = ["setuptools>=68"]
